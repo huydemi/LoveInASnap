@@ -156,7 +156,7 @@
 				TargetAttributes = {
 					041EDBC81A625CEC00ECDA48 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 9C3J75JG9B;
+						DevelopmentTeam = 8KDJ9PT669;
 					};
 				};
 			};
@@ -370,12 +370,12 @@
 			baseConfigurationReference = 41DB44F00A391070920E1B48 /* Pods-LoveInASnap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9C3J75JG9B;
+				DEVELOPMENT_TEAM = 8KDJ9PT669;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LoveInASnap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.LoveInASnap;
+				PRODUCT_BUNDLE_IDENTIFIER = huy.dang.quoc.LoveInASnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -385,12 +385,12 @@
 			baseConfigurationReference = 6309A4D0F4EEC46E1C39200A /* Pods-LoveInASnap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 9C3J75JG9B;
+				DEVELOPMENT_TEAM = 8KDJ9PT669;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LoveInASnap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.LoveInASnap;
+				PRODUCT_BUNDLE_IDENTIFIER = huy.dang.quoc.LoveInASnap;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
