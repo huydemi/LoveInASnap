@@ -15,6 +15,10 @@
 		041EDBD91A625CEC00ECDA48 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041EDBD71A625CEC00ECDA48 /* LaunchScreen.xib */; };
 		041EDBF11A625D9200ECDA48 /* Swap.png in Resources */ = {isa = PBXBuildFile; fileRef = 041EDBEF1A625D9200ECDA48 /* Swap.png */; };
 		04C5EA191F5E9F1C00B61340 /* Envelope.png in Resources */ = {isa = PBXBuildFile; fileRef = 04C5EA181F5E9ECE00B61340 /* Envelope.png */; };
+		6B970D7020EDEC62001031DC /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 6B970D6F20EDEC62001031DC /* tessdata */; };
+		6B970D7220EDECDD001031DC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B970D7120EDECDD001031DC /* libstdc++.tbd */; };
+		6B970D7420EDECE9001031DC /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B970D7320EDECE9001031DC /* CoreImage.framework */; };
+		6B970D7620EDECF5001031DC /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B970D7520EDECF5001031DC /* TesseractOCR.framework */; };
 		AF38CC4FE50975F2E1B914C2 /* Pods_LoveInASnap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32DA11A19669D51DC642808B /* Pods_LoveInASnap.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +36,10 @@
 		32DA11A19669D51DC642808B /* Pods_LoveInASnap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoveInASnap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41DB44F00A391070920E1B48 /* Pods-LoveInASnap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveInASnap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoveInASnap/Pods-LoveInASnap.debug.xcconfig"; sourceTree = "<group>"; };
 		6309A4D0F4EEC46E1C39200A /* Pods-LoveInASnap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoveInASnap.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoveInASnap/Pods-LoveInASnap.release.xcconfig"; sourceTree = "<group>"; };
+		6B970D6F20EDEC62001031DC /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = SOURCE_ROOT; };
+		6B970D7120EDECDD001031DC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		6B970D7320EDECE9001031DC /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		6B970D7520EDECF5001031DC /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B970D7620EDECF5001031DC /* TesseractOCR.framework in Frameworks */,
+				6B970D7420EDECE9001031DC /* CoreImage.framework in Frameworks */,
+				6B970D7220EDECDD001031DC /* libstdc++.tbd in Frameworks */,
 				AF38CC4FE50975F2E1B914C2 /* Pods_LoveInASnap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,6 +93,7 @@
 		041EDBCC1A625CEC00ECDA48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6B970D6F20EDEC62001031DC /* tessdata */,
 				040EC4EF1F521C3A008203FB /* LoveInASnapLaunchIcon.png */,
 				04C5EA181F5E9ECE00B61340 /* Envelope.png */,
 				041EDBEF1A625D9200ECDA48 /* Swap.png */,
@@ -102,6 +114,9 @@
 		D8D30E874C3516159D25FF49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B970D7520EDECF5001031DC /* TesseractOCR.framework */,
+				6B970D7320EDECE9001031DC /* CoreImage.framework */,
+				6B970D7120EDECDD001031DC /* libstdc++.tbd */,
 				32DA11A19669D51DC642808B /* Pods_LoveInASnap.framework */,
 			);
 			name = Frameworks;
@@ -171,6 +186,7 @@
 				041EDBD41A625CEC00ECDA48 /* Main.storyboard in Resources */,
 				040EC4F11F521EB4008203FB /* LoveInASnapLaunchIcon.png in Resources */,
 				041EDBF11A625D9200ECDA48 /* Swap.png in Resources */,
+				6B970D7020EDEC62001031DC /* tessdata in Resources */,
 				041EDBD91A625CEC00ECDA48 /* LaunchScreen.xib in Resources */,
 				041EDBD61A625CEC00ECDA48 /* Images.xcassets in Resources */,
 				04C5EA191F5E9F1C00B61340 /* Envelope.png in Resources */,
@@ -355,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9C3J75JG9B;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LoveInASnap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -369,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9C3J75JG9B;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = LoveInASnap/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
