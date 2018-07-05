@@ -61,6 +61,20 @@ class ViewController: UIViewController {
   
   @IBAction func swapText(_ sender: Any) {
     view.endEditing(true)
+    
+    // validate inputs
+    guard let text = textView.text,
+      let findText = findTextField.text,
+      let replaceText = replaceTextField.text else {
+        return
+    }
+    
+    // replace
+    textView.text =
+      text.replacingOccurrences(of: findText, with: replaceText)
+    // Erase inputs
+    findTextField.text = nil
+    replaceTextField.text = nil
   }
   
   @IBAction func sharePoem(_ sender: Any) {
