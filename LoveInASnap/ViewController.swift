@@ -78,6 +78,23 @@ class ViewController: UIViewController {
   }
   
   @IBAction func sharePoem(_ sender: Any) {
+    // don’t share anything if empty
+    if textView.text.isEmpty {
+      return
+    }
+    // initialize a new UIActivityViewController
+    let activityViewController = UIActivityViewController(activityItems:
+      [textView.text], applicationActivities: nil)
+    // excluded irrelevant to share context
+    let excludeActivities:[UIActivityType] = [
+      .assignToContact,
+      .saveToCameraRoll,
+      .addToReadingList,
+      .postToFlickr,
+      .postToVimeo]
+    activityViewController.excludedActivityTypes = excludeActivities
+    // present dialog
+    present(activityViewController, animated: true)
   }
 
   // Tesseract Image Recognition
