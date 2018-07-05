@@ -54,6 +54,8 @@ class ViewController: UIViewController {
   
   @IBAction func takePhoto(_ sender: Any) {
     view.endEditing(true)
+    
+    presentImagePicker()
   }
   
   @IBAction func swapText(_ sender: Any) {
@@ -98,5 +100,44 @@ extension ViewController: UITextFieldDelegate {
   
   func textFieldDidEndEditing(_ textField: UITextField) {
     moveViewDown()
+  }
+}
+
+// must conform to when using a UIImagePickerController
+// MARK: - UINavigationControllerDelegate
+extension ViewController: UINavigationControllerDelegate {
+}
+
+// MARK: - UIImagePickerControllerDelegate
+extension ViewController: UIImagePickerControllerDelegate {
+  func presentImagePicker() {
+    // present a set of capture options to the user
+    let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Image",
+                                                   message: nil, preferredStyle: .actionSheet)
+    // add a Take Photo button if camera is available
+    if UIImagePickerController.isSourceTypeAvailable(.camera) {
+      let cameraButton = UIAlertAction(title: "Take Photo",
+                                       style: .default) { (alert) -> Void in
+                                        let imagePicker = UIImagePickerController()
+                                        imagePicker.delegate = self
+                                        imagePicker.sourceType = .camera
+                                        self.present(imagePicker, animated: true)
+      }
+      imagePickerActionSheet.addAction(cameraButton)
+    }
+    // add Choose Existing button
+    let libraryButton = UIAlertAction(title: "Choose Existing",
+                                      style: .default) { (alert) -> Void in
+                                        let imagePicker = UIImagePickerController()
+                                        imagePicker.delegate = self
+                                        imagePicker.sourceType = .photoLibrary
+                                        self.present(imagePicker, animated: true)
+    }
+    imagePickerActionSheet.addAction(libraryButton)
+    // Add a cancel button
+    let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+    imagePickerActionSheet.addAction(cancelButton)
+    // show dialog
+    present(imagePickerActionSheet, animated: true)
   }
 }
