@@ -30,6 +30,7 @@
 
 import UIKit
 import Foundation
+import TesseractOCR
 
 class ViewController: UIViewController {
   
@@ -67,6 +68,21 @@ class ViewController: UIViewController {
 
   // Tesseract Image Recognition
   func performImageRecognition(_ image: UIImage) {
+    // Initialize a new G8Tesseract object with eng+fra
+    if let tesseract = G8Tesseract(language: "eng+fra") {
+      // slowest mode, most accurate
+      tesseract.engineMode = .tesseractCubeCombined
+      // automatically recognize paragraph breaks
+      tesseract.pageSegmentationMode = .auto
+      // increase the contrast, and reduce the exposure
+      tesseract.image = image.g8_blackAndWhite()
+      // Perform the optical character recognition
+      tesseract.recognize()
+      // Put the recognized text
+      textView.text = tesseract.recognizedText
+    }
+    // Remove the activity indicator
+    activityIndicator.stopAnimating()
   }
   
   // The following methods handle the keyboard resignation/
