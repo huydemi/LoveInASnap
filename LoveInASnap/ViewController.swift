@@ -140,6 +140,21 @@ extension ViewController: UIImagePickerControllerDelegate {
     // show dialog
     present(imagePickerActionSheet, animated: true)
   }
+  
+  // Tells the delegate that the user picked a still image or movie
+  func imagePickerController(_ picker: UIImagePickerController,
+                             didFinishPickingMediaWithInfo info: [String : Any]) {
+    // Unwrap the image contained within the info dictionary with the key
+    if let selectedPhoto = info[UIImagePickerControllerOriginalImage] as? UIImage,
+      let scaledImage = selectedPhoto.scaleImage(640) {
+      // Start animating indicator
+      activityIndicator.startAnimating()
+      // Dismiss
+      dismiss(animated: true, completion: {
+        self.performImageRecognition(scaledImage)
+      })
+    }
+  }
 }
 
 // MARK: - UIImage extension
